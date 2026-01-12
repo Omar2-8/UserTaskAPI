@@ -16,7 +16,9 @@ public static class UserMapper
           user.FirstName,
           user.LastName,
           user.Role.ToString(),
-          user.IsActive
+          user.IsActive,
+          user.CreatedAt,
+          user.UpdatedAt
       );
 
     public static User ToEntity(this CreateUserModel model) =>
@@ -28,12 +30,15 @@ public static class UserMapper
         FirstName = model.FirstName,
         LastName = model.LastName,
         Role = Enum.Parse<UserRole>(model.Role, true),
-        IsActive = true
+        IsActive = true,
+        CreatedAt = DateTime.UtcNow,
     };
 
 
     public static User ToUpdateEntity(this UpdateUserModel model, User user)
     { 
+        user.UpdatedAt = DateTime.UtcNow;
+
         if (!string.IsNullOrWhiteSpace(model.FirstName))
             user.FirstName = model.FirstName;
 

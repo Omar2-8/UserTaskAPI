@@ -14,7 +14,7 @@ public static class DbSeeder
         {
             Username = "admin",
             Email = "admin@test.com",
-            PasswordHash = "HASHED_ADMIN_PASSWORD",
+            PasswordHash = "demo",
             FirstName = "System",
             LastName = "Admin",
             Role = UserRole.Admin,
@@ -25,7 +25,7 @@ public static class DbSeeder
         {
             Username = "user",
             Email = "user@test.com",
-            PasswordHash = "HASHED_USER_PASSWORD",
+            PasswordHash = "demo",
             FirstName = "Normal",
             LastName = "User",
             Role = UserRole.User,

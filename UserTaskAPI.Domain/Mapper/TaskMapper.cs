@@ -17,7 +17,9 @@ public static class TaskMapper
         task.AssignedToUserId,
         task.AssignedToUser?.Username,
         task.DueDate,
-        task.CompletedAt
+        task.CompletedAt,
+        task.CreatedAt,
+        task.UpdatedAt
     );
 
 
@@ -29,12 +31,15 @@ public static class TaskMapper
         Status = model.Status,
         Priority = Enum.Parse<PriorityLevel>(model.Priority, true),
         AssignedToUserId = model.AssignedToUserId,
-        DueDate = model.DueDate
+        DueDate = model.DueDate,
+        CreatedAt = DateTime.UtcNow,
     };
 
 
     public static TaskItem ToUpdateEntity(this UpdateTaskModel model, TaskItem task, bool isAdmin)
     {
+
+        task.UpdatedAt = DateTime.UtcNow;
 
         if (!isAdmin)
         {

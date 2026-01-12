@@ -10,6 +10,10 @@ public sealed class TaskService(ITaskRepository taskRepo, IUnitOfWork uow) : ITa
     public async Task<TaskDTO> GetByIdAsync(int id, int currentUserId, bool isAdmin)
     {
         var task = await taskRepo.GetByIdAsync(id) ?? throw new KeyNotFoundException("Task not found");
+       
+        if (!isAdmin && task.AssignedToUserId != currentUserId)
+            throw new KeyNotFoundException("Task not found");
+
         return task.ToDTO();
     }
 

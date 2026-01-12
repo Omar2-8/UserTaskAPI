@@ -7,5 +7,8 @@ public record UserDTO(
     string FirstName,
     string LastName,
     string Role,
-    bool IsActive
+    bool IsActive,
+    DateTime CreatedAt,
+    DateTime? UpdatedAt
+
 );

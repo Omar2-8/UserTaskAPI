@@ -8,8 +8,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     public DbSet<User> Users => Set<User>();
     public DbSet<TaskItem> Tasks => Set<TaskItem>();
 
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+    { 
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly); 
+        base.OnModelCreating(modelBuilder);
     }
 }

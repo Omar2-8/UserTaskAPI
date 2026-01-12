@@ -11,5 +11,7 @@ public record TaskDTO(
     int? AssignedToUserId,
     string? AssignedToUsername,
     DateTime? DueDate,
-    DateTime? CompletedAt
+    DateTime? CompletedAt,
+    DateTime CreatedAt,
+    DateTime? UpdatedAt
 );
