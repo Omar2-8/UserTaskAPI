@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="UserTaskAPI.Application/UserTask.Application.csproj" />
+  <Project Path="UserTaskAPI.Domain/UserTask.Domain.csproj" />
+  <Project Path="UserTaskAPI.Infrastructure/UserTask.Infrastructure.csproj" />
+  <Project Path="UserTaskAPI.Tests/UserTask.Tests.csproj" />
+  <Project Path="UserTaskAPI/UserTask.API.csproj" />
+</Solution>
