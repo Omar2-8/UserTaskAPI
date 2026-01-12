@@ -127,7 +127,7 @@ HOW TO RUN
 
 1. Clone the repository
 
-git clone 
+git clone https://github.com/Omar2-8/UserTaskAPI.git
 cd UserTaskAPI
 
 2. Restore dependencies
@@ -139,14 +139,14 @@ dotnet restore
 dotnet run --project UserTaskAPI.API
 
 The API will be available at:
-https://localhost:<port>
+https://localhost:5089
 
 --------------------------------------------------------------------
 
 SWAGGER / OPENAPI
 
 Swagger UI is available at:
-https://localhost:<port>/
+https://localhost:5089/index.html
 
 Authenticating in Swagger:
 1. Call the Auth/Login endpoint
