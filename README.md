@@ -128,6 +128,7 @@ HOW TO RUN
 1. Clone the repository
 
 git clone https://github.com/Omar2-8/UserTaskAPI.git
+
 cd UserTaskAPI
 
 2. Restore dependencies
